@@ -1,12 +1,12 @@
 '''
  * This module is useful to connect to a Wi-Fi Network in a fast and secure way.
  *
- * Name    = wireless
+ * Name = wireless
  * Version = 1.0.1
- * Update Date: 10/10/2021
- * Author  = Jhonatan Lamiña
- * e-mail  = contacto@jhonatanlamina.com
- * Url     = www.jhonatanlamina.com
+ * Update Date = 10/10/2021
+ * Author = Jhonatan Lamiña
+ * e-mail = contacto@jhonatanlamina.com
+ * Web = www.jhonatanlamina.com
  *
  *
  * To use this module you must include the following in your file
