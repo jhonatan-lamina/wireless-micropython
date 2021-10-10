@@ -2,7 +2,8 @@
  * This module is useful to connect to a Wi-Fi Network in a fast and secure way.
  *
  * Name    = wireless
- * Version = 1.0.0
+ * Version = 1.0.1
+ * Update Date: 10/10/2021
  * Author  = Jhonatan Lamiña
  * e-mail  = contacto@jhonatanlamina.com
  * Url     = www.jhonatanlamina.com
@@ -39,7 +40,7 @@ class wifi():
         if not wlan.isconnected():
             wlan.active(True)
             wlan.connect(ssid, password)
-            print('Connecting to:', ssid)
+            print('Connecting to: %s' % ssid)
             timeout = time.ticks_ms()
             while not wlan.isconnected():
                 if output != 'None':
@@ -48,12 +49,12 @@ class wifi():
                     indicator.off()
                     time.sleep(0.15)
                 if (time.ticks_diff (time.ticks_ms(), timeout) > 10000):
-                 break
+                    break
             if wlan.isconnected():
                 if output != 'None':
                     indicator.on()
                 print('Successful connection to: %s' % ssid)
-                print(str(wlan.ifconfig()))
+                print('IP: %s\nSUBNET: %s\nGATEWAY: %s\nDNS: %s' % wlan.ifconfig()[0:4])
             else:
                 if output != 'None':
                     indicator.off()
@@ -62,5 +63,4 @@ class wifi():
         else:
             if output != 'None':
                 indicator.on()
-            print('Connected')
-            print(str(wlan.ifconfig()))
+            print('Connected\nIP: %s\nSUBNET: %s\nGATEWAY: %s\nDNS: %s' % wlan.ifconfig()[0:4])

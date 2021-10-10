@@ -5,4 +5,5 @@ import wireless
 #SSID     = Wi-Fi Network Name (string)
 #PASSWORD = Wi-Fi Network Password (string)
 #PinOut   = Output pin that indicates the status of the connection, it can be omitted if not required. (int)
+#wireless.wifi('SSID', 'PASSWORD')
 wireless.wifi('SSID', 'PASSWORD', PinOut)
